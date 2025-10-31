@@ -53,4 +53,8 @@ public class AlertsFramesPage extends BasePage {
     public String getFrameText() {
         return getText(sampleHeading);
     }
+
+    public void acceptPromptAlert(String text) {
+        super.acceptPromptAlert(text);
+    }
 }

@@ -39,4 +39,12 @@ public class AlertsFramesTests extends BaseTest {
         page.acceptAlert();
         Assert.assertNotNull(driver);
     }
+
+    @Test(description = "Positive: click prompt alert button, enter text and accept")
+    public void promptAlertAccept() {
+        AlertsFramesPage page = new AlertsFramesPage(driver).openAlerts();
+        page.clickPrompt();
+        page.acceptPromptAlert("Test User");
+        Assert.assertNotNull(driver);
+    }
 }

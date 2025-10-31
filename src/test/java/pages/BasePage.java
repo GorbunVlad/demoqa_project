@@ -75,4 +75,11 @@ public class BasePage {
         driver.switchTo().alert().dismiss();
         driver.switchTo().defaultContent();
     }
+
+    public void acceptPromptAlert(String text) {
+        wait.until(ExpectedConditions.alertIsPresent());
+        driver.switchTo().alert().sendKeys(text);
+        driver.switchTo().alert().accept();
+        driver.switchTo().defaultContent();
+    }
 }
